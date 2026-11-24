@@ -56,3 +56,11 @@ if __name__ == "__main__":
     
     for prod_encontrado in resultados:
         prod_encontrado.mostrar_informacion()
+
+
+def buscar_por_codigo(lista_productos: list, codigo: str):
+    "Busca un producto específico por su código exacto"
+    for prod in lista_productos:
+        if prod.codigo.lower() == codigo.lower():
+            return prod
+    return None
